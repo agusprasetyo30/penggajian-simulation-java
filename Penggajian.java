@@ -1,4 +1,5 @@
- /**
+
+/**
  *
  * @author gokpraz
  */
@@ -11,7 +12,14 @@ public class Penggajian {
     * Variabel array untuk menampung data pegawai
     */
    public static String[] pegawai = {
-      "Agus Prasetyo", "Eko Prastiyo", "Naruto Uzumaki", "Ahmad Wahyudi", "Rahmad Affandi", "Uchiha Widodo" 
+      "Agus Prasetyo", "Bayu Prastiyo", "Naruto Uzumaki", "Ahmad Wahyudi", "Rahmad Affandi", "Uchiha Widodo" 
+   };
+   
+   /**
+    * Variabel array untuk menampung golongan pegawai
+    */
+   public static int[] golongan = {
+      1, 2, 1, 3, 3, 1
    };
    
    /**
@@ -52,7 +60,7 @@ public class Penggajian {
          System.out.print("Pilih menu yang dipilih (berdasarkan nomer) : ");
          pilih_menu = sc.nextInt();
 
-         switch(pilih_menu){
+         switch(pilih_menu) {
             case 1:
                // Menampilkan daftar mahasiswa
                daftarPegawai();
@@ -164,7 +172,9 @@ public class Penggajian {
       System.out.println();
 
       // Menampilkan rincian gaji sesuai dengan pegawai yang dipilih
-      System.out.println("Rincian Gaji :  [ " + pegawai[ubah_index_pegawai] + " ]");
+      System.out.println("Rincian Gaji : [ " + pegawai[ubah_index_pegawai] + " ]");
+      System.out.println("PNS Golongan : [ " + golongan[ubah_index_pegawai] + " ]");
+      
       
       System.out.println();
       
@@ -202,6 +212,8 @@ public class Penggajian {
       
       // Menampilkan rincian gaji sesuai dengan pegawai yang dipilih
       System.out.println("Nama Pegawai : " + pegawai[ubah_index_pegawai]);
+      System.out.println("PNS Golongan : [ " + golongan[ubah_index_pegawai] + " ]");
+
       System.out.println("------------------------------");
             
       // Menampilkan data gaji sesuai dengan index pegawai
@@ -242,7 +254,7 @@ public class Penggajian {
       // Mengecek status pencarian, JIKA STATUS PENCARIAN == TRUE
       // Jika status_pencarian = true maka pegawai yang dicari ada, dan secara otomatis mencetak slip gaji
       // Jika status_pencarian = false maka pegawai yang dicari tidak ada
-      if (status_pencarian) {
+      if (status_pencarian == true) {
          // Ini kenapa kok ditambah 1 / + 1 dikarenakan mengikuti yang awal
          // pada fungsi cetakSlipGaji() menggunakan variabel index yang dikurangi 1
          cetakSlipGaji(tampung_index_pegawai + 1);
