@@ -168,6 +168,7 @@ public class Penggajian {
       // Hal ini diperlukan untuk keperluan index array
       int ubah_index_pegawai = index_pegawai - 1;
       int hitung_total_gaji;
+      double ppn;
       
       System.out.println();
 
@@ -186,10 +187,12 @@ public class Penggajian {
       System.out.println("------------------------------");
 
       // Variabel hitung_total_gaji digunakan untuk menampung dari hasil total gaji yang dihitung
-      hitung_total_gaji = gaji_pokok[ubah_index_pegawai] + tunjangan[ubah_index_pegawai] + lembur[ubah_index_pegawai];
+      hitung_total_gaji = gaji_pokok[ubah_index_pegawai] + tunjangan[ubah_index_pegawai] + lembur[ubah_index_pegawai] ;
+      ppn = hitung_total_gaji - (hitung_total_gaji * 0.1); // ppn 10%
       
       // Digunakan untuk menampilkan total gaji
-      System.out.println("Total Gaji    : Rp. " + hitung_total_gaji);
+      System.out.println("Gaji Kotor    : Rp. " + hitung_total_gaji);
+      System.out.println("Gaji Bersih   : Rp. " + ppn);
       System.out.println("------------------------------");
    }
    
@@ -204,6 +207,7 @@ public class Penggajian {
       int ubah_index_pegawai = index_pegawai - 1;
       
       int hitung_total_gaji;
+      double ppn;
       
       System.out.println();
       System.out.println("------------------------------");
@@ -217,16 +221,18 @@ public class Penggajian {
       System.out.println("------------------------------");
             
       // Menampilkan data gaji sesuai dengan index pegawai
-      System.out.println("1. Gaji Pokok : Rp. " + gaji_pokok[ubah_index_pegawai]);
-      System.out.println("2. Tunjangan  : Rp. " + tunjangan[ubah_index_pegawai]);
-      System.out.println("3. Lembur     : Rp. " + lembur[ubah_index_pegawai]);
+      System.out.println("1. Gaji Pokok     : Rp. " + gaji_pokok[ubah_index_pegawai]);
+      System.out.println("2. Tunjangan      : Rp. " + tunjangan[ubah_index_pegawai]);
+      System.out.println("3. Lembur         : Rp. " + lembur[ubah_index_pegawai]);
       System.out.println("------------------------------");
 
       // Variabel hitung_total_gaji digunakan untuk menampung dari hasil total gaji yang dihitung
       hitung_total_gaji = gaji_pokok[ubah_index_pegawai] + tunjangan[ubah_index_pegawai] + lembur[ubah_index_pegawai];
+      ppn = hitung_total_gaji - (hitung_total_gaji * 0.1); // ppn 10%
       
       // Digunakan untuk menampilkan total gaji
-      System.out.println("Total         : Rp. " + hitung_total_gaji);
+      System.out.println("Total Gaji Kotor  : Rp. " + hitung_total_gaji);
+      System.out.println("Total Gaji Bersih : Rp. " + ppn);
       System.out.println("------------------------------");  
    }
    
